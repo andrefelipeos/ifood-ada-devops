@@ -43,6 +43,20 @@ Ao executar o comando `ls -lR` novamente, ainda é possível visualizar os arqui
 
 Isso ocorre porque a permissão de execução em um diretório influencia outras permissões. Até é possível listar os arquivos em um diretório sem premissão de execução (fazendo uso da permissão de leitura). No entanto, não é possível executar operações nesse diretório, como criar ou deletar arquivos, entrar no diretório e, nesse caso, listar ou modificar as permissões dos arquivos dentro do diretório.
 
-## Referências
-MCBRIEN, Scott. **Linux file permissions-explained**. RedHat: Enable SysAdmin. 2023. Disponível em: https://www.redhat.com/sysadmin/linux-file-permissions-explained. Acesso em: 26 de outubro de 2023.
+## Utilizando o comando `sudo`
 
+O comando `sudo` permite que usuários não-*root* executem comandos com os privilégios do usuário *root*. Para isso, é necessário que eles estejam configurados no arquivo `/etc/sudoers`, ou que pertençam a um grupo configurado no mesmo arquivo.
+
+No caso do Fedora, existe um grupo chamado *wheel* já configurado. O usuário *andre*, usado nos exemplos desse documento, está nesse grupo. Portanto ele pode utilizar o comando `sudo` como nos exemplos a seguir.
+
+![Usando o comando sudo para extrapolar permissões e executar os comandos anteriores.](./capturas-de-tela/captura-de-tela-4.png)
+
+A permissão de *root* concedida pelo comando `sudo` se sobrepõe às permissões de usuário configuradas nos arquivos e diretórios. Por isso foi possível acessar os arquivos no diretório `pasta`, mesmo sem ter a permissão de execução definida para o usuário.
+
+## Referências
+
+CARRIGAN, Tyler. **Linux command line basics: sudo**. RedHat: Enable SysAdmin. 2020. Disponível em: https://www.redhat.com/sysadmin/sudo. Acesso em: 28 de outubro de 2023.
+
+JAHODA, Mirek; SINHA, Ankur. **Adding a user to sudoers**. Fedora Docs: Quick Docs - Usage and customisation. 2023. Diponível em: https://docs.fedoraproject.org/en-US/quick-docs/adding_user_to_sudoersi_file. Acesso em: 26 de outubro de 2023.
+
+MCBRIEN, Scott. **Linux file permissions-explained**. RedHat: Enable SysAdmin. 2023. Disponível em: https://www.redhat.com/sysadmin/linux-file-permissions-explained. Acesso em: 26 de outubro de 2023.
