@@ -17,3 +17,7 @@ A opção `--detach` ou `-d` executa o container em segundo plano e retorna o ID
 
 Agora que o cantainer está em execução, podemos acessar a aplicação através de um navegador no endereço `localhost:5000`.  
 
+## Crédito do projeto Python/Flask
+Repositório do projeto Python utilizado nessa atividade:
+- https://github.com/do-community/flask_auth_scotch
+
