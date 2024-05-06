@@ -7,6 +7,15 @@ Nessa atividade foram criados dois serviços:
 - Um com a aplicação Node
 - E outro com o banco de dados MySQL
 
+## Executando com Docker Compose
+Para executar ambos os serviços, use o comando:  
+
+```
+docker compose up -d
+```
+
+A aplicação poderá ser acessada por um navegador no endereço `localhost:3000`.
+
 ## Crédito do projeto Node
 Projeto Node utilizado nessa atividade:
 - https://github.com/docker/getting-started-app
